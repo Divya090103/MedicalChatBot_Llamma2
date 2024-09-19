@@ -5,3 +5,5 @@ langchain==0.0.225
 flask
 pypdf
 PyPDF2
+-e .
+python-dotenv
