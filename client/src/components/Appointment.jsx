@@ -7,7 +7,11 @@ const Appointment = () => {
         <div className="container">
           <h1 className="text-center ">Make an Appointment</h1>
 
-          <form className="main-form">
+          <form
+            className="main-form"
+            action="https://formspree.io/f/xgveverr"
+            method="POST"
+          >
             <div className="row mt-5">
               <div className="col-12 col-sm-6 py-2 wow fadeInLeft">
                 <input

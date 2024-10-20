@@ -22,7 +22,7 @@ const Navbar = () => {
   const handlelogout = () => {
     localStorage.removeItem("user");
     settoken("");
-    Navigate("/");
+    navigate("/");
   };
   return (
     <>
@@ -136,7 +136,7 @@ const Navbar = () => {
                         <li>
                           <div class="dropdown">
                             <button
-                              style={{ border: "none",background:"none" }}
+                              style={{ border: "none", background: "none" }}
                               type="button"
                               className="fs-4"
                               data-bs-toggle="dropdown"
@@ -147,9 +147,11 @@ const Navbar = () => {
                             <ul class="dropdown-menu">
                               <li>
                                 <Link
-                                  style={{ textdecoration: "none" ,color:"black"}}
+                                  style={{
+                                    textdecoration: "none",
+                                    color: "black",
+                                  }}
                                   onClick={handlelogout}
-                                   
                                 >
                                   Log out
                                 </Link>
