@@ -6,7 +6,15 @@ import Doctor from "../components/Doctor";
 import Appointment from "../components/Appointment";
 import Services from "../components/Services";
 import Footer from "../components/Footer";
+import { useState,useEffect } from "react";
 const Home = () => {
+  const [token, settoken] = useState("");
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user && user.jsontoken) {
+      settoken(user.jsontoken);
+    }
+  }, [token]);
   return (
     <>
       <Navbar />
@@ -14,7 +22,8 @@ const Home = () => {
       <Services/>
       <Doctor />
       <News />
-      <Appointment />
+     
+      {token!=""?  <Appointment />:""}
       <Footer/>
     </>
   );
