@@ -1,0 +1,17 @@
+install requirements
+make a notebook trials.inpynb
+
+from langchain import PromptTemplate
+from langchain.chains import RetrievalQA
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.vectorstores import Pinecone
+import pinecone
+from langchain.document_loaders import PyMuPDFLoader, DirectoryLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.prompts import PromptTemplate
+from langchain.llms import CTransformers
+
+
+for the frontend
+create template file which will make all the files and folders mentioned in the template file
+set src as local package in setup.py
